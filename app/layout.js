@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           {/* footer */}
           <footer className="bg-blue-50 py-12">
             <div className="container mx-auto px-4 text-center text-gray-600">
-              Made with ❤️ by{" "}
+              Designed and Developed by{" "}
               <span className="font-semibold">Chirag Sharma</span>
             </div>
           </footer>
