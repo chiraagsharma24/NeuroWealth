@@ -120,3 +120,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  
+  .gradient {
+    @apply bg-gradient-to-br from-blue-500 to-indigo-900 ;
+  }
+
+  .gradient-title {
+    @apply bg-gradient-to-br from-blue-500 to-indigo-900 font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text ;
+  }
+}
