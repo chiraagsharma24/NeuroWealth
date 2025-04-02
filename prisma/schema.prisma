@@ -29,7 +29,7 @@ model User {
   @@map("users")
 } 
 
-model Account {
+model Account { 
   id           String        @id @default(uuid())
   name         String
   type         AccountType

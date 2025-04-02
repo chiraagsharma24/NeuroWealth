@@ -14,7 +14,7 @@ export default function Layout() {
       <Suspense
         fallback={<BarLoader className="mt-4" width={"100%"} color="#9333ea" />}
       >
-        <DashboardPage />
+        <DashboardPage/>
       </Suspense>
     </div>
   );
