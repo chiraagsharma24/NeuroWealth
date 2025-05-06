@@ -1,3 +1,5 @@
+"use client" ;
+
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -13,7 +15,7 @@ const useFetch = (cb) => {
     try {
       const response = await cb(...args);
       setData(response);
-      setError(null);
+      setError(null) ;
     } catch (error) {
       setError(error);
       toast.error(error.message);
@@ -25,4 +27,4 @@ const useFetch = (cb) => {
   return { data, loading, error, fn, setData };
 };
 
-export default useFetch;
+export default useFetch ;
