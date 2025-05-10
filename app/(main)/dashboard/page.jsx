@@ -36,7 +36,6 @@ export default async function DashboardPage() {
         accounts={accounts}
         transactions={transactions || []}
       />
-
       {/* Accounts Grid */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <CreateAccountDrawer>
@@ -53,5 +52,6 @@ export default async function DashboardPage() {
           ))}
       </div>
     </div>
+
   );
 }
