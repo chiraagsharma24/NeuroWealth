@@ -6,7 +6,8 @@ import React from "react" ;
 
 export default async function AddTransactionPage({ searchParams }) {
   const accounts = await getUserAccounts();
-  const editId = searchParams?.edit;
+  const resolvedSearchParams = await searchParams;
+  const editId = resolvedSearchParams?.edit;
 
   let initialData = null;
   if (editId) {

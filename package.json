@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@arcjet/inspect": "^1.0.0-beta.7",
     "@arcjet/next": "^1.0.0-beta.7",
     "@clerk/nextjs": "^6.9.0",
     "@connectrpc/connect": "^2.0.2",
