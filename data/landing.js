@@ -87,25 +87,25 @@ import {
   
   // Testimonials Data
   export const testimonialsData = [
-    {
-      name: "Ratan Patel",
-      role: "Dream 11 Winner",
-      image: "https://randomuser.me/api/portraits/men/75.jpg",
-      quote:
-        "NeuroWealth has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
-    },
-    {
-      name: "Satish Chauhan",
-      role: "Founder + Ceo",
-      image: "https://randomuser.me/api/portraits/men/75.jpg",
-      quote:
-        "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
-    },
-    {
-      name: "Asif Ali",
-      role: "God-level developer",
-      image: "https://randomuser.me/api/portraits/men/74.jpg",
-      quote:
-        "I recommend NeuroWealth to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
-    },
-  ];
+  {
+    name: "Ratan Patel",
+    role: "SDE @Microsoft",
+    image: "/ratan.jpg",
+    quote:
+      "As an SDE at Microsoft, I'm constantly evaluating tools that enhance productivity. NeuroWealth's intuitive AI-based financial analysis is a game-changer for tech professionals managing complex finances.",
+  },
+  {
+    name: "Satish Chauhan",
+    role: "Unicorn Founder",
+    image: "/satish.jpg",
+    quote:
+      "Running a unicorn demands precision and speed. NeuroWealth helps me automate my expense tracking and make fast, data-backed decisions that scale with my business.",
+  },
+  {
+    name: "Asif Ali",
+    role: "SDE @Google",
+    image: "/asif.jpg",
+    quote:
+      "NeuroWealth’s AI-powered receipt scanning has made expense reporting effortless. I also love the monthly email summaries—they give me a clear snapshot of where my money goes without lifting a finger.",
+  },
+];
