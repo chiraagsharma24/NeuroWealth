@@ -77,62 +77,62 @@ export function DashboardOverview({ accounts, transactions }) {
   );
 
   return (
-    <div className="grid gap-4 md:grid-cols-2">
+    <div className="grid gap-3 sm:gap-4 grid-cols-1 md:grid-cols-2 w-full">
       {/* Recent Transactions Card */}
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
-          <CardTitle className="text-base font-normal">
+      <Card className="w-full shadow-sm hover:shadow-md transition-shadow bg-card/50 backdrop-blur-sm">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardTitle className="text-sm sm:text-base font-medium">
             Recent Transactions
           </CardTitle>
           <Select
             value={selectedAccountId}
             onValueChange={setSelectedAccountId}
           >
-            <SelectTrigger className="w-[140px]">
+            <SelectTrigger className="w-[100px] sm:w-[140px] text-xs sm:text-sm h-8 sm:h-9 bg-background/50 backdrop-blur-sm">
               <SelectValue placeholder="Select account" />
             </SelectTrigger>
             <SelectContent>
               {accounts.map((account) => (
-                <SelectItem key={account.id} value={account.id}>
+                <SelectItem key={account.id} value={account.id} className="text-sm">
                   {account.name}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
         </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
+        <CardContent className="pt-2">
+          <div className="space-y-2 sm:space-y-3">
             {recentTransactions.length === 0 ? (
-              <p className="text-center text-muted-foreground py-4">
+              <p className="text-center text-muted-foreground py-4 text-sm">
                 No recent transactions
               </p>
             ) : (
               recentTransactions.map((transaction) => (
                 <div
                   key={transaction.id}
-                  className="flex items-center justify-between"
+                  className="flex items-center justify-between gap-2 p-2 sm:p-3 rounded-lg hover:bg-muted/50 transition-colors"
                 >
-                  <div className="space-y-1">
-                    <p className="text-sm font-medium leading-none">
+                  <div className="space-y-0.5 min-w-0 flex-1">
+                    <p className="text-sm font-medium leading-none truncate">
                       {transaction.description || "Untitled Transaction"}
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-xs text-muted-foreground">
                       {format(new Date(transaction.date), "PP")}
                     </p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1 flex-shrink-0">
                     <div
                       className={cn(
-                        "flex items-center",
+                        "flex items-center text-sm font-medium",
                         transaction.type === "EXPENSE"
                           ? "text-red-500"
                           : "text-green-500"
                       )}
                     >
                       {transaction.type === "EXPENSE" ? (
-                        <ArrowDownRight className="mr-1 h-4 w-4" />
+                        <ArrowDownRight className="mr-1 h-3 w-3" />
                       ) : (
-                        <ArrowUpRight className="mr-1 h-4 w-4" />
+                        <ArrowUpRight className="mr-1 h-3 w-3" />
                       )}
                       ₹{transaction.amount.toFixed(2)}
                     </div>
@@ -145,29 +145,31 @@ export function DashboardOverview({ accounts, transactions }) {
       </Card>
 
       {/* Expense Breakdown Card */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base font-normal">
+      <Card className="w-full shadow-sm hover:shadow-md transition-shadow bg-card/50 backdrop-blur-sm">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-sm sm:text-base font-medium">
             Monthly Expense Breakdown
           </CardTitle>
         </CardHeader>
-        <CardContent className="p-0 pb-5">
+        <CardContent className="p-0 pb-4">
           {pieChartData.length === 0 ? (
-            <p className="text-center text-muted-foreground py-4">
+            <p className="text-center text-muted-foreground py-4 text-sm">
               No expenses this month
             </p>
           ) : (
-            <div className="h-[300px]">
+            <div className="h-[200px] sm:h-[280px] px-2 sm:px-4">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={pieChartData}
                     cx="50%"
                     cy="50%"
-                    outerRadius={80}
+                    outerRadius={45}
+                    innerRadius={20}
                     fill="#8884d8"
                     dataKey="value"
                     label={({ name, value }) => `${name}: ₹${value.toFixed(2)}`}
+                    labelLine={false}
                   >
                     {pieChartData.map((entry, index) => (
                       <Cell
@@ -182,9 +184,19 @@ export function DashboardOverview({ accounts, transactions }) {
                       backgroundColor: "hsl(var(--popover))",
                       border: "1px solid hsl(var(--border))",
                       borderRadius: "var(--radius)",
+                      fontSize: "0.75rem",
+                      padding: "0.5rem",
                     }}
                   />
-                  <Legend />
+                  <Legend
+                    layout="horizontal"
+                    verticalAlign="bottom"
+                    align="center"
+                    wrapperStyle={{
+                      fontSize: "0.7rem",
+                      paddingTop: "0.5rem",
+                    }}
+                  />
                 </PieChart>
               </ResponsiveContainer>
             </div>

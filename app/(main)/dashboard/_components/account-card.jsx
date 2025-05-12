@@ -50,35 +50,37 @@ export default function AccountCard({ account }) {
   }, [error]);
 
   return (
-    <Card className="hover:shadow-md transition-shadow group relative">
+    <Card className="w-full shadow-sm hover:shadow-md transition-shadow bg-card/50 backdrop-blur-sm">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-sm font-medium capitalize">
+        <CardTitle className="text-xs sm:text-sm font-medium capitalize truncate max-w-[70%]">
           {name}
         </CardTitle>
         <Switch
           checked={isDefault}
           onClick={handleDefaultChange}
           disabled={updateDefaultLoading}
+          className="scale-90 sm:scale-100"
         />
       </CardHeader>
 
       <CardContent>
-  <div className="flex items-center justify-between">
-    <div className="text-2xl font-bold">
-      ₹ {parseFloat(balance).toFixed(2)}
-    </div>
-    <Button
-      size="sm"
-      variant="outline"
-      onClick={() => router.push(`/account/${id}`)}
-    >
-      View
-    </Button>
-  </div>
-  <p className="text-xs text-muted-foreground">
-    {type.charAt(0) + type.slice(1).toLowerCase()} Account
-  </p>
-</CardContent>
+        <div className="flex items-center justify-between gap-2">
+          <div className="text-base sm:text-lg font-bold tracking-tight">
+            ₹ {parseFloat(balance).toFixed(2)}
+          </div>
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={() => router.push(`/account/${id}`)}
+            className="text-xs sm:text-sm h-7 sm:h-8 px-2 sm:px-3 hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            View
+          </Button>
+        </div>
+        <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
+          {type.charAt(0) + type.slice(1).toLowerCase()} Account
+        </p>
+      </CardContent>
     </Card>
   );
 }
