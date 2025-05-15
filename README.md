@@ -2,9 +2,13 @@
 
 **Your Smartest Finance Companion** – NeuroWealth is an advanced AI-powered finance platform that helps users seamlessly manage their money, track budgets, analyze spending, and automate financial insights, all in one sleek, intelligent dashboard.
 
-## 🔗 Live Demo
+## 🔗 Live Demo Link
 
 [Click here to visit the live site](https://neurowealth-green.vercel.app/)  
+
+## 🎥 Recorded Demo Video
+
+[Click here to watch the demo video](https://x.com/LordGoldyy/status/1923070208421281795)
 
 ## 📌 Features
 
