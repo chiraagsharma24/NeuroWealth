@@ -8,7 +8,7 @@
 
 ## 🎥 Recorded Demo Video
 
-[Click here to watch the demo video](https://x.com/LordGoldyy/status/1923070208421281795)
+[Click here to watch the demo video](https://drive.google.com/drive/folders/1kgxUS8X5Ao4mAqIXRNXcF6CL0eWEUcRM?usp=sharing)
 
 ## 📌 Features
 
