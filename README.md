@@ -10,7 +10,7 @@
 
 [Click here to watch the demo video](https://drive.google.com/drive/folders/1kgxUS8X5Ao4mAqIXRNXcF6CL0eWEUcRM?usp=sharing)
 
-[](https://openrockets.me/v/gitstarts2025v.png)
+
 
 ## 📌 Features
 
@@ -96,5 +96,6 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 3. Commit your changes (`git commit -am 'Add some foo'`)  
 4. Push to the branch (`git push origin feature/foo`)  
 5. Open a PR
-
+   
+<a href="https://openrockets.me/v/2025"><img src="https://openrockets.me/v/gitstarts2025v.png"></a>
 
