@@ -10,6 +10,8 @@
 
 [Click here to watch the demo video](https://drive.google.com/drive/folders/1kgxUS8X5Ao4mAqIXRNXcF6CL0eWEUcRM?usp=sharing)
 
+[](https://openrockets.me/v/gitstarts2025v.png)
+
 ## 📌 Features
 
 - ✅ **Multiple Bank Account Management**  
